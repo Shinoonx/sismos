@@ -11,13 +11,13 @@ public class Main {
 
     /* PASOS A SEGUIR
     * 1.- CREACION DE UNA MATRIZ DE 7 FILAS Y 24 COLUMNAS REFIRIENDOSE A LAS 7 DIAS DE LA SEMEANA Y LAS 24
-    * HORAS DE UN DIA
+    * HORAS DE UN DIA (la matriz usa doubles )
     * 2.-CREAMOS UN MENU
     * 3.- RELLENAMOS LA MATRIZ USANDDO EL MATH.RANDOM PARA GENERAR LA SIMULACION DE DATOS
     * 3.5.- se crea un metodo para mostar la matriz en pantalla para verificar el funcionamiento del relleno
     * 4.- creamos un metodo que reccorra toda la matriz (con un for) para encontrar el "mayor sismo de la
     * semana
-    * 5.-   */
+    * 5.- Usando el mismo sistema del paso 4 creamos el buscador de numeros >= 5 y el sms  */
     public static double[][] crearMatriz(int filas, int columnas) {
         double[][] sismos = new double[filas][columnas];
         return sismos;
@@ -97,7 +97,9 @@ public class Main {
                     break;
                 case 2:
                     double numeroMayor = mostrarMayor(sismos);
-                    System.out.println("El mayor sismo registrado es: "+numeroMayor);
+                    System.out.println("El mayor sismo encontrado es: ");
+                    System.out.printf("Valor: %.2f",numeroMayor);
+                    System.out.println();
                     break;
                 case 3:
                     int mayorA5 = mayoresCinco(sismos);
@@ -107,7 +109,6 @@ public class Main {
                     sms(sismos);
                     break;
                 case 5:
-
                     mostrarSismos(sismos);
                     break;
                 case 6:
